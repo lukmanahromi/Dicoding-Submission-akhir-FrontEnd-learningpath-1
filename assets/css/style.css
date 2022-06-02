@@ -1,0 +1,397 @@
+:root {
+    --blue : #007bc1;
+    --dark-blue : #004a75;
+    --orange : #ff8000;
+    --dark-orange : #cc6600;
+    --smoke-grey : #e5e5e5;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--smoke-grey);
+}
+
+/* Notification panel */
+
+.notification-panel{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 0 100px;
+
+}
+
+.notification-panel.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: height 1s ease;
+}
+
+.notification-panel .container{
+    width: 55%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.notification-message a{
+    text-decoration: none;
+    color: var(--blue);
+    transition: 0.5s;
+}
+
+.notification-message a:hover{
+    color: var(--dark-blue);
+}
+
+.notification-btn{
+    background-color: var(--blue);
+    text-align: center;
+    margin: 10px auto;
+    padding: 1em;
+    border-radius: 3px;
+    width: 100px;
+    height: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.notification-panel .notification-btn:hover{
+    background-color: var(--dark-blue);
+}
+
+.notification-panel .notification-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Hero */
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    max-height: 720px;
+    background: var(--dark-blue) url("../img/work-desk__dustin-lee.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;    
+}
+
+.hero .container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0, 38, 77, 0.6);
+}
+
+.hero-content{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hero-logo img{
+    width: 50px;
+    margin: 20px 0 0 20px;
+}
+
+.hero-content h2{
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.9em;
+    color: white;
+}
+
+.hero-content h3{
+    margin: 0;
+    font-size: 1.9em;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-content p{
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: var(--smoke-grey);
+    padding: 0 75px;
+}
+
+.hero-content .btn{
+    text-decoration: none;
+    color: var(--smoke-grey);
+    border: 2px solid var(--smoke-grey);
+    padding: 1em 1.4em;
+    width: 200px;
+    margin: 0 auto;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: white;
+}
+
+.hero-content .btn:hover{
+    background-color: var(--smoke-grey);
+    color: var(--dark-blue);
+}
+
+
+/* Highlight Panel */
+
+.highlight-panel{
+    float: left;
+    width: 75%;
+}
+
+.highlight-head{
+    text-align: center;    
+    width: 560px;
+    margin: 50px auto;
+}
+
+
+.highlight-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.highlight-card{
+    border: 2px solid var(--dark-blue);
+    padding: 10px 10px;
+    flex: 0 0 30%;
+    margin: 10px auto;   
+    border-radius: 5px;
+}
+
+.card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title span{
+    color: var(--blue);
+}
+
+/* Newsletter */
+
+.newsletter{
+    max-width: 640px;
+    background-color: rgba(0, 123, 193, .8);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 20px;
+}
+
+.newsletter.hide{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all .5s ease-out;
+}
+
+.newsletter .close-icon{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.newsletter h3{
+    font-size: 1.4em;
+}
+
+.newsletter p{
+    color: var(--smoke-grey);
+    font-size: 1.1em;
+}
+
+.newsletter form input{
+    padding: 10px;
+    border: none;
+    margin-top: 5px;
+}
+
+.newsletter form .input-text{
+    width: 480px;
+}
+
+.newsletter form .btn{
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.newsletter form .btn:hover{
+    background-color: var(--dark-orange);
+}
+
+/* Aside */
+
+aside{
+    float: right;
+    width: 25%;
+    text-align: center;
+    
+}
+
+aside .foto-profil{
+    border: 0 solid black;
+    border-radius: 100px;
+    margin-top: 10px;
+    width: 200px;
+    background-color: var(--dark-blue)
+}
+
+aside h3{
+    margin-bottom: 0;
+}
+
+aside p{
+    margin: 5px;
+}
+
+.profil{
+    padding: 10px;
+    color: black;
+}
+
+.social{
+    margin-top: 10px;
+}
+.social span{
+    color: var(--blue);
+}
+
+.social a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social a:hover{
+    color: var(--blue);
+}
+
+/* Footer */
+footer{
+    background-color: var(--dark-blue);
+    padding: 10px 0;
+    color: var(--smoke-grey);
+    float: left;
+    width: 100%;
+    
+}
+
+.footer-content{
+    text-align: center;
+}
+
+
+/* MEDIA */
+
+/* Mobile screen */
+
+@media only screen and (max-width: 480px) {
+    .highlight-card{
+        flex: 0 0 90%;
+    }
+
+    .newsletter form .input-text{
+        width: 94%;
+        margin: 0;
+    }
+
+    .newsletter form .btn{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .hero-content{
+        text-align: center;
+        margin: 150px 0 0 0;
+        padding: 10px 20px;
+        position: unset;
+        top: unset;
+        left: unset;
+        -ms-transform: unset;
+        transform: unset;
+        align-items: center;
+    }
+
+    .hero-content p{
+        padding: 0;
+    }
+
+    .highlight-panel{
+        float: left;
+        width: 100%;
+    }
+
+    aside{
+        float: left;
+        width: 100%;
+    }
+
+    .social{
+        padding-bottom: 80px;
+    }
+
+    .highlight-head{  
+        width: 360px;
+    }
+
+    .notification-panel{
+        position: unset;
+        height: 150px;
+        margin: 0;
+        padding: 0;
+        background-color: var(--smoke-grey);
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .notification-panel .container{
+        display: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .notification-message{
+        margin: 0 20px ;
+        font-size: .9em;   
+    }
+
+    .notification-btn{
+        margin-left: 20px;
+        margin-top: 0;
+        width: 40px;
+    }
+}
+
+
+/* Tablet */
+ @media only screen and (min-device-width: 481px) and (max-device-width: 960px) {
+    .highlight-card{
+        flex: 0 0 45%;
+    }
+}
